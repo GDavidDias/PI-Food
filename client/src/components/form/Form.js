@@ -4,8 +4,9 @@ import style from "./Form.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { URL } from "../../varGlobal";
 //const URL = 'http://localhost:3001';
-const URL = 'https://pi-food-deploy-production-8a84.up.railway.app';
+//const URL = 'https://pi-food-deploy-production-8a84.up.railway.app';
 
 
 export default function Form(props){

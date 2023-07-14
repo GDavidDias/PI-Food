@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import style from "./Detail.module.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { URL } from "../../varGlobal";
 //const URL = 'http://localhost:3001';
-const URL = 'https://pi-food-deploy-production-8a84.up.railway.app';
+//const URL = 'https://pi-food-deploy-production-8a84.up.railway.app';
 
 
 export default function Detail(props){
