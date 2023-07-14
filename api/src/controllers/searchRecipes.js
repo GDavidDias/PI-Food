@@ -40,7 +40,7 @@ const searchRecipes = async function(req,res){
         //const list = resp.data.results;
         let list;
 
-        if(IS_API_LOCAL==='true'){
+        if(islocal){
             list = resp.results;
         }else{
             list = resp.data.results;

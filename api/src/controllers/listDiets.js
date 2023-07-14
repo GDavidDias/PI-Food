@@ -42,7 +42,7 @@ const listDiets = async function(req,res){
         //console.log("axios trae en listDiets: ",resp.data.results);
         if(resp){
             let listrecipes;
-            if(IS_API_LOCAL==='true'){
+            if(islocal){
                 listrecipes = resp.results;
             }else{
                 listrecipes = resp.data.results;
