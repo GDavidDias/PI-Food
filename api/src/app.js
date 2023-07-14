@@ -16,7 +16,6 @@ server.use(bodyParser.json({ limit: '50mb' }));
 server.use(cookieParser());
 server.use(morgan('dev'));
 server.use((req, res, next) => {
-  //res.header('Access-Control-Allow-Origin', 'http://localhost:3000'); // update to match the domain you will make the request from
   res.header('Access-Control-Allow-Origin', 'https://pi-food-deploy-five.vercel.app'); // update to match the domain you will make the request from
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -27,10 +26,10 @@ server.use((req, res, next) => {
 server.use('/', routes);
 
 //-------------pruebas
-server.use((req,res,next)=>{
-  console.log("estoy pasando por el middleware :)");
-  next();
-});
+// server.use((req,res,next)=>{
+//   console.log("estoy pasando por el middleware :)");
+//   next();
+// });
 //-->un ENDPOINT GET
 // server.get('/',(req,res)=>{
 //   res.status(200).send("ok");
