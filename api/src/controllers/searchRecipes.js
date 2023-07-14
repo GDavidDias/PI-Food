@@ -26,6 +26,7 @@ const searchRecipes = async function(req,res){
         let resp
         //?--BUSCA TODO EN API
         if(islocal){
+            console.log("ingresa a buscar en API Local");
             //API_LOCAL
             //resp = await axios (`${API_LOCAL_HOST}/complexSearch?addRecipeInformation=true&number=100&apiKey=${API_KEY}`);
             resp = await require('../data/complexSearch.json');
