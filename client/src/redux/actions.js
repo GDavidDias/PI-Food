@@ -37,7 +37,7 @@ export const searchRecipes = (value) => async(dispatch)=>{
 export const addAllDiets = () => async (dispatch)=>{
   console.log("entra a action addAllDiets")
   try{
-    const {data} = await axios.get(`${URL}/diets`);
+    const {data} = await axios.get(`${URL}diets`);
     return dispatch({
       type:ADD_ALL_DIETS,
       payload:data
