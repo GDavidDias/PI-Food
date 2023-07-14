@@ -32,7 +32,7 @@ const listDiets = async function(req,res){
             //console.log("que trae de API-LOCAL",resp.data.results.diets);
 
             resp = await require('../data/complexSearch.json');
-            //console.log("que trae de JSON",resp.results);
+            console.log("que trae de JSON",resp.results);
         }else{
             //API EXTERNA
             resp = await axios (`${API_URL}/complexSearch?addRecipeInformation=true&number=100&apiKey=${API_KEY}`);
