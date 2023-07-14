@@ -8,7 +8,7 @@ export const addAllRecipes = () => async(dispatch)=>{
     console.log("entra a action addAllRecipes")
     //const endpoint = `${URL}/complexSearch?addRecipeInformation=true&number=10&apiKey=${API}`;
     // const endpoint = `${URL}/recipes`;
-    const {data} = await axios.get(`${URL}recipes/`);
+    const {data} = await axios.get(`${URL}/recipes/`);
     //console.log("que trae axios.get")
     //console.log(response);
     return dispatch({
@@ -37,7 +37,7 @@ export const searchRecipes = (value) => async(dispatch)=>{
 export const addAllDiets = () => async (dispatch)=>{
   console.log("entra a action addAllDiets")
   try{
-    const {data} = await axios.get(`${URL}diets`);
+    const {data} = await axios.get(`${URL}/diets`);
     return dispatch({
       type:ADD_ALL_DIETS,
       payload:data
