@@ -28,7 +28,7 @@ const searchDetailRecipes = async function(req,res){
             console.log("busca en API")
             let respApi
 
-            if(islocal === 'true'){
+            if(islocal){
                 //BUSCA EN API LOCAL
                 //console.log("busco en api local")
                 //respApi = await axios (`${API_LOCAL_HOST}/${idRecipe}/information?apiKey=${API_KEY}&addRecipeInformation=true`)

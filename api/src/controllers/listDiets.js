@@ -26,7 +26,7 @@ const listDiets = async function(req,res){
         // console.log(IS_API_LOCAL)
         let resp;
         
-        if(islocal==='true'){
+        if(islocal){
             //API LOCAL
             //resp = await axios (`${API_LOCAL_HOST}/complexSearch?addRecipeInformation=true&number=100&apiKey=${API_KEY}`);
             //console.log("que trae de API-LOCAL",resp.data.results.diets);
