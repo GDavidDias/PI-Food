@@ -11,7 +11,7 @@ const axios = require("axios");
 require('dotenv').config();
 const {API_URL, API_KEY, API_LOCAL_HOST, IS_API_LOCAL} = process.env;
 //const datos = require('../data/complexSearch.json');
-const islocal = true;
+const islocal = false;
 const { Diet } = require("../db.js");
 
 //!------------------ARMA LISTA DE DIETAS-----------------
