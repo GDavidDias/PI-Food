@@ -1,7 +1,7 @@
 import axios from "axios";
 import { ADD_ALL , SEARCH_RECIPES, ERROR, ORDER, ADD_ALL_DIETS, FILTER,SET_PAGEITEMS_GLOBAL,SET_FIRSTINDEX_GLOBAL,SET_CURRENTPAGE_GLOBAL , SET_RECIPESEARCH_GLOBAL, RESET, SET_UPD_ID,SET_ITEMS_GLOBAL} from "./types";
   //const URL = 'http://localhost:3001';
-  const URL = 'https://pi-food-deploy-production-8a84.up.railway.app';
+  const URL = 'https://pi-food-deploy-production-8a84.up.railway.app/';
 
 //ACTION -> addAllRecipes
 export const addAllRecipes = () => async(dispatch)=>{
