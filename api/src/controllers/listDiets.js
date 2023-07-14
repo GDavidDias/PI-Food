@@ -11,8 +11,7 @@ const axios = require("axios");
 require('dotenv').config();
 const {API_URL, API_KEY, API_LOCAL_HOST, IS_API_LOCAL} = process.env;
 //const datos = require('../data/complexSearch.json');
-
-
+const islocal = true;
 const { Diet } = require("../db.js");
 
 //!------------------ARMA LISTA DE DIETAS-----------------
@@ -27,7 +26,7 @@ const listDiets = async function(req,res){
         // console.log(IS_API_LOCAL)
         let resp;
         
-        if(IS_API_LOCAL==='true'){
+        if(islocal==='true'){
             //API LOCAL
             //resp = await axios (`${API_LOCAL_HOST}/complexSearch?addRecipeInformation=true&number=100&apiKey=${API_KEY}`);
             //console.log("que trae de API-LOCAL",resp.data.results.diets);

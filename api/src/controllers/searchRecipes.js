@@ -11,6 +11,7 @@ const axios = require("axios");
 require('dotenv').config();
 const {API_URL, API_KEY, API_LOCAL_HOST, IS_API_LOCAL} = process.env;
 const { Recipe, Diet, Op } = require("../db.js");
+const islocal=true;
 
 //!------------------BUSCA RECETAS-----------------
 //?Si el request viene sin query, se retorna todas las recetas
@@ -24,7 +25,7 @@ const searchRecipes = async function(req,res){
         //console.log("que trae query: ",name)
         let resp
         //?--BUSCA TODO EN API
-        if(IS_API_LOCAL === 'true'){
+        if(islocal === 'true'){
             //API_LOCAL
             //resp = await axios (`${API_LOCAL_HOST}/complexSearch?addRecipeInformation=true&number=100&apiKey=${API_KEY}`);
             resp = await require('../data/complexSearch.json');

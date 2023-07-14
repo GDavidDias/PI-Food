@@ -11,6 +11,7 @@ const axios = require("axios");
 require('dotenv').config();
 const {API_URL, API_KEY, API_LOCAL_HOST, IS_API_LOCAL} = process.env;
 const { Recipe, Diet, Op } = require("../db.js");
+const islocal=true;
 
 //!------------------BUSCA DETALLE DE RECETA-----------------
 const searchDetailRecipes = async function(req,res){
@@ -27,7 +28,7 @@ const searchDetailRecipes = async function(req,res){
             console.log("busca en API")
             let respApi
 
-            if(IS_API_LOCAL === 'true'){
+            if(islocal === 'true'){
                 //BUSCA EN API LOCAL
                 //console.log("busco en api local")
                 //respApi = await axios (`${API_LOCAL_HOST}/${idRecipe}/information?apiKey=${API_KEY}&addRecipeInformation=true`)
